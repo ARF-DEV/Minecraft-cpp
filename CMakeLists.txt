@@ -6,9 +6,11 @@ add_executable(minecraft main.cpp)
 
 add_subdirectory(extern/glfw)
 add_subdirectory(glad)
+add_subdirectory(src)
 
 target_include_directories(${PROJECT_NAME}
      PRIVATE extern/glfw/include
+     # PRIVATE src
 )
 
 target_link_directories(${PROJECT_NAME} 
@@ -16,6 +18,7 @@ target_link_directories(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME} 
-     glfw
-     glad
+     PUBLIC glfw
+     PUBLIC glad
+     PUBLIC src
 )
