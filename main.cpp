@@ -45,11 +45,11 @@ int main () {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        if (input.KeyIsPressed(GLFW_KEY_SPACE)) {
+        if (input.KeyIsDown(GLFW_KEY_SPACE)) {
             printf("TEHEEE\n");
         }
 
-        if (input.MouseButtonIsPressed(GLFW_MOUSE_BUTTON_LEFT)) {
+        if (input.MouseButtonIsDown(GLFW_MOUSE_BUTTON_LEFT)) {
             printf("YOHOOO\n");
         }
 

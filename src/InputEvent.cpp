@@ -36,6 +36,22 @@ bool InputEvent::KeyIsPressed(int key) {
      return key == keyboard_key;
 }
 
+bool InputEvent::KeyIsDown(int key) {
+     if (keyboard_action != GLFW_PRESS) {
+          return false;
+     }
+     
+     return key == keyboard_key;
+}
+
+bool InputEvent::MouseButtonIsDown(int key) {
+     if (mouse_action != GLFW_PRESS) {
+          return false;
+     }
+     
+     return key == mouse_button;
+}
+
 void InputEvent::mouseCallback(GLFWwindow* window, int button, int action, int mods) {
      if (action == GLFW_PRESS) {
           InputEvent::mouse_action = action;
