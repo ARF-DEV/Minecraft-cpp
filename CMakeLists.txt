@@ -5,6 +5,7 @@ project(minecraft VERSION 0.01)
 add_executable(minecraft main.cpp)
 
 add_subdirectory(extern/glfw)
+add_subdirectory(extern/glm)
 add_subdirectory(glad)
 add_subdirectory(src)
 
@@ -21,4 +22,5 @@ target_link_libraries(${PROJECT_NAME}
      PUBLIC glfw
      PUBLIC glad
      PUBLIC src
+     PUBLIC glm
 )

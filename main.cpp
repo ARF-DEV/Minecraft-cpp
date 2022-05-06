@@ -1,6 +1,7 @@
 #include <glad/glad.h>
 #include <glfw/glfw3.h>
 #include <cstdio>
+#include <glm/vec4.hpp>
 
 #include "src/InputEvent.h"
 
@@ -11,6 +12,9 @@ const char* windowTitle = "Minecraft";
 
 
 int main () {
+
+    glm::vec4 test = {2, 2, 2, 2};
+
     if(!glfwInit()) {
         printf("Failed to initilized window\n");
         return -1;
